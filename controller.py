@@ -59,10 +59,7 @@ class ControllerLogin():
         x = session.query(Login).filter(Login.email == email).all()
         
         if len(x) != 1:
-            return 2
-            
-        # if x[0].email != email:
-        #     return 2 # email nao cadastrado no banco de dados(conta nao existe)
+            return 2 # email invalido
         
         if bcrypt.checkpw(senha.encode(), x[0].senha_hash.encode()) == False:
             return 3 #senha incorreta 
@@ -70,4 +67,4 @@ class ControllerLogin():
         return 1 # logado com sucesso
         
 
-# print(ControllerLogin.verificar_login('eduardo@hotmail.com', 'edu12345'))
+        #       print(ControllerLogin.verificar_login('eduardo@hotmail.com', 'edu12345'))
