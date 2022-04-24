@@ -7,7 +7,7 @@ Sistema de cadastro e login utilizando MySQL e SQLAlchemy.<br>
   - Email
   - Senha
 ## 2. Login:
-  - Nome 
+  - Email
   - Senha<br><br>
 
 ### Conhecimentos a ser utilizados:
